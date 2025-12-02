@@ -71,7 +71,7 @@ class HungarianMatcher(nn.Module):
 
         Returns:
             (List[Tuple[torch.Tensor, torch.Tensor]]): A list of size batch_size, each element is a tuple (index_i,
-                index_j), where:
+            index_j), where:
                 - index_i is the tensor of indices of the selected predictions (in order)
                 - index_j is the tensor of indices of the corresponding selected ground truth targets (in order)
                 For each batch element, it holds:

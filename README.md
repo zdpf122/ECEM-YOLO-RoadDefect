@@ -60,7 +60,7 @@ The dataset used in this project is an extended version of **RDD2022 (Road Damag
 ### 3.2 Dataset Download
 | Dataset Type | Access Link | Description |
 | :--- | :--- | :--- |
-| **Full Extended Dataset** | [Zenodo](https://doi.org/10.5281/zenodo.XXXXXXX) | For complete model training and evaluation |
+| **Full Extended Dataset** | [Zenodo](https://doi.org/10.5281/zenodo.17792244) | For complete model training and evaluation |
 | **Sample Dataset** | [GitHub ./samples/](samples/) | For quick code verification |
 
 ### 3.3 Dataset Structure
@@ -116,7 +116,7 @@ If you use the code, extended dataset, or related findings from this project in 
   journal={The Visual Computer},
   year={202X},
   publisher={Springer},
-  note={Code: https://github.com/zdpf122/ECEM-YOLO-RoadDefect; Dataset: https://doi.org/10.5281/zenodo.XXXXXXX}
+  note={Code: https://github.com/zdpf122/ECEM-YOLO-RoadDefect; Dataset: https://doi.org/10.5281/zenodo.17792244}
 }
 ```
 

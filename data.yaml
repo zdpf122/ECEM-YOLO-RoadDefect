@@ -1,0 +1,7 @@
+path: data/images
+train: train
+val: val
+test: test
+
+nc: 7  # number of classes
+names: ['D00','D10','D20','D40','crack_on_line','guardrail','traffic_sign']  # class names

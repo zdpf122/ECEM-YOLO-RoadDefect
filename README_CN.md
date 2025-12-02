@@ -60,7 +60,7 @@ pip install -r requirements.txt
 ### 3.2 数据集下载
 | 数据集类型 | 访问链接 | 说明 |
 | :--- | :--- | :--- |
-| **完整扩展数据集** | [Zenodo](https://doi.org/[10.5281/zenodo.17792244]) | 用于完整模型训练与评估 |
+| **完整扩展数据集** | [Zenodo](10.5281/zenodo.17792243) | 用于完整模型训练与评估 |
 | **示例数据集** | [GitHub ./samples/](samples/) | 用于快速验证代码功能 |
 
 ### 3.3 数据集结构
@@ -116,7 +116,7 @@ python test.py
   journal={The Visual Computer},
   year={202X},
   publisher={Springer},
-  note={Code: https://github.com/zdpf122/ECEM-YOLO-RoadDefect; Dataset: https://doi.org/10.5281/zenodo.XXXXXXX}
+  note={Code: https://github.com/zdpf122/ECEM-YOLO-RoadDefect; Dataset: 10.5281/zenodo.17792243}
 }
 ```
 

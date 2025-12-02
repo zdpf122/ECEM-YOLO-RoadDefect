@@ -65,14 +65,14 @@ pip install -r requirements.txt
 ```
 data/
 ├── images/
-│   ├── train/          # 训练集图像 (JPG格式, 建议分辨率640×640)
-│   └── val/            # 验证集图像
-├── labels/
-│   ├── train/          # 训练集标注 (YOLO txt格式: class_id x_center y_center width height)
-│   └── val/            # 验证集标注
-└── test/               # 测试集 (可选，结构与train/val相同)
-    ├── images/
-    └── labels/
+│   ├── train/          # 训练集图像 (JPG格式，建议分辨率640×640)
+│   ├── val/            # 验证集图像
+│   └── test/           # 测试集图像（可选）
+└── labels/
+    ├── train/          # 训练集标注 (YOLO txt格式: class_id x_center y_center width height)
+    ├── val/            # 验证集标注
+    └── test/           # 测试集标注（可选）
+
 ```
 **缺陷类别**（在RDD2022原有类别基础上扩展）：
 - `D00`：纵向裂缝

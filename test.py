@@ -1,20 +1,21 @@
 from ultralytics import YOLO
-import time
 
 # 加载YOLO模型
-model = YOLO('runs/detect/RDDn/weights/best.pt')  # 根据实际路径调整
+model = YOLO("runs/detect/RDDn/weights/best.pt")  # 根据实际路径调整
 
 # 在验证集上评估模型
-val_metrics = model.val(data='data.yaml', split='val')
+val_metrics = model.val(data="data.yaml", split="val")
 
 # 在测试集上评估模型
-test_metrics = model.val(data='data.yaml', split='test')
+test_metrics = model.val(data="data.yaml", split="test")
+
 
 # 计算F1-score（F1 = 2*(Precision*Recall)/(Precision+Recall)）
 def calculate_f1(precision, recall):
     if precision + recall == 0:
         return 0.0
     return 2 * (precision * recall) / (precision + recall)
+
 
 # 计算验证集和测试集的F1-score
 val_f1 = calculate_f1(val_metrics.box.mp, val_metrics.box.mr)

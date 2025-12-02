@@ -1,6 +1,8 @@
 # ECEM-YOLO: 基于高效裂缝增强模块的道路缺陷检测
 
-本仓库代码及扩展数据集与投稿至《The Visual Computer》期刊的论文 **《Enhanced Road Infrastructure Defect Detection via Attention-Based Visual Inspection》** 直接相关。我们提供了一套完整的道路缺陷检测开源方案，包含集成**高效裂缝增强模块（ECEM）** 的改进型YOLOv11模型、训练/测试脚本以及扩展后的RDD2022数据集，旨在提升模型在复杂场景下的检测与泛化能力。
+> **请注意**：此代码仓库与提交至《The Visual Computer》期刊的论文 **"Enhanced Road Infrastructure Defect Detection via Attention-Based Visual Inspection"** 直接相关。
+> 如果您在研究中使用本代码、模型或数据集，请务必引用相关论文。
+> 我们提供了一套完整的道路缺陷检测开源方案，包含集成高效裂缝增强模块（ECEM） 的改进型YOLOv11模型、训练/测试脚本以及扩展后的RDD2022数据集，旨在提升模型在复杂场景下的检测与泛化能力。
 
 ## 1. 项目概述
 
@@ -65,13 +67,13 @@ pip install -r requirements.txt
 ```
 data/
 ├── images/
-│   ├── train/          # 训练集图像 (JPG格式，建议分辨率640×640)
+│   ├── train/          # 训练集图像
 │   ├── val/            # 验证集图像
-│   └── test/           # 测试集图像（可选）
+│   └── test/           # 测试集图像
 └── labels/
-    ├── train/          # 训练集标注 (YOLO txt格式: class_id x_center y_center width height)
+    ├── train/          # 训练集标注 (YOLO txt格式)
     ├── val/            # 验证集标注
-    └── test/           # 测试集标注（可选）
+    └── test/           # 测试集标注
 
 ```
 **缺陷类别**（在RDD2022原有类别基础上扩展）：

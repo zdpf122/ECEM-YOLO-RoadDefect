@@ -3,11 +3,11 @@ train: train
 val: val
 test: test
 nc: 7
-names: 
-   0: D00
-   1: D10
-   2: D20
-   3: D40
-   4: crack_on_line
-   5: guardrail
-   6: traffic_sign
+names:
+  0: D00
+  1: D10
+  2: D20
+  3: D40
+  4: crack_on_line
+  5: guardrail
+  6: traffic_sign

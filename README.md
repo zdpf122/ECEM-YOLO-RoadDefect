@@ -1,3 +1,6 @@
+# ECEM-YOLO-RoadDefect
+
+ECEM-YOLO for road defect detection, with extended RDD2022 dataset
 # ECEM-YOLO: Road Defect Detection with Efficient Crack Enhancement Module
 
 > **Important Notice**: This code repository is directly related to the paper **"Enhanced Road Infrastructure Defect Detection via Attention-Based Visual Inspection"** submitted to *The Visual Computer* journal.

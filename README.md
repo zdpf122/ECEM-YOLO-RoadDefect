@@ -110,7 +110,7 @@ If you use the code, extended dataset, or related findings from this project in 
 
 2. **Citation for This Work** (DOI will be updated upon journal acceptance):
 ```plaintext
-@article{gao202xecemyolo,
+@article{gao2025ecemyolo,
   title={Enhanced Road Infrastructure Defect Detection via Attention-Based Visual Inspection},
   author={Ningbo Gao, Dupengfei Zhai, Guifang Shi, Guanya Hao, Yong Qi, Zi Yang},
   journal={The Visual Computer},

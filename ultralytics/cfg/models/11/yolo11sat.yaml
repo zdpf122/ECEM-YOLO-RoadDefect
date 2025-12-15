@@ -20,10 +20,10 @@ backbone:
   - [-1, 1, Conv, [64, 3, 2]] # 0-P1/2（不变）
   - [-1, 1, Conv, [128, 3, 2]] # 1-P2/4（不变）
   # 2层：C3k2CE→TAFM，参数：dim=256, window=7, heads=4, reduction=4（对应ratio=0.25）
-  - [-1, 2, SAT_TAFM, [256, 7, 4, 4, False]] 
+  - [-1, 2, SAT_TAFM, [256, 7, 4, 4, False]]
   - [-1, 1, Conv, [256, 3, 2]] # 3-P3/8（不变）
   # 4层：C3k2CE→TAFM，dim=512, reduction=4
-  - [-1, 2, SAT_TAFM, [512, 7, 4, 4, False]] 
+  - [-1, 2, SAT_TAFM, [512, 7, 4, 4, False]]
   - [-1, 1, Conv, [512, 3, 2]] # 5-P4/16（不变）
   # 6层：C3k2CE→TAFM，dim=512, shortcut=True
   - [-1, 2, SAT_TAFM, [512, 7, 4, 16, True]]
@@ -37,12 +37,12 @@ head:
   - [-1, 1, nn.Upsample, [None, 2, "nearest"]] # 11（不变）
   - [[-1, 6], 1, Concat, [1]] # 12（不变）
   # 13层：C3k2CE→TAFM，dim=512, shortcut=False
-  - [-1, 2, SAT_TAFM, [512, 7, 4, 16, False]] 
+  - [-1, 2, SAT_TAFM, [512, 7, 4, 16, False]]
 
   - [-1, 1, nn.Upsample, [None, 2, "nearest"]] # 14（不变）
   - [[-1, 4], 1, Concat, [1]] # 15（不变）
   # 16层：C3k2CE→TAFM，dim=256, shortcut=False
-  - [-1, 2, SAT_TAFM, [256, 7, 4, 16, False]] 
+  - [-1, 2, SAT_TAFM, [256, 7, 4, 16, False]]
 
   - [-1, 1, Conv, [256, 3, 2]] # 17（不变）
   - [[-1, 13], 1, Concat, [1]] # 18（不变）

@@ -1,6 +1,6 @@
 # ECEM-YOLO: 基于高效裂缝增强模块的道路缺陷检测
 
-> **请注意**：此代码仓库与提交至《The Visual Computer》期刊的论文 **"Enhanced Road Infrastructure Defect Detection via Attention-Based Visual Inspection"** 直接相关。
+> **请注意**：此代码仓库与提交至《Journal of Real-Time Image Processing》期刊的论文 **"Enhanced Road Infrastructure Defect Detection via Attention-Based Visual Inspection"** 直接相关。
 > 如果您在研究中使用本代码、模型或数据集，请务必引用相关论文。
 > 我们提供了一套完整的道路缺陷检测开源方案，包含集成高效裂缝增强模块（ECEM） 的改进型YOLOv11模型、训练/测试脚本以及扩展后的RDD2022数据集，旨在提升模型在复杂场景下的检测与泛化能力。
 
@@ -113,7 +113,7 @@ python test.py
 @article{gao202xecemyolo,
   title={Enhanced Road Infrastructure Defect Detection via Attention-Based Visual Inspection},
   author={Ningbo Gao, Dupengfei Zhai, Guifang Shi, Guanya Hao, Yong Qi, Zi Yang},
-  journal={The Visual Computer},
+  journal={Journal of Real-Time Image Processing},
   year={202X},
   publisher={Springer},
   note={Code: https://github.com/zdpf122/ECEM-YOLO-RoadDefect; Dataset: (https://doi.org/10.5281/zenodo.17792244)}

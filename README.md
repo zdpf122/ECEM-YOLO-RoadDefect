@@ -1,6 +1,6 @@
 # ECEM-YOLO: Road Defect Detection with Efficient Crack Enhancement Module
 
-> **Important Notice**: This code repository is directly related to the paper **"Enhanced Road Infrastructure Defect Detection via Attention-Based Visual Inspection"** submitted to *The Visual Computer* journal.
+> **Important Notice**: This code repository is directly related to the paper **"Enhanced Road Infrastructure Defect Detection via Attention-Based Visual Inspection"** submitted to *Journal of Real-Time Image Processing* journal.
 > If you use the code, models, or datasets in your research, please be sure to cite the relevant papers.
 > We provide a complete open-source solution for road defect detection, including an improved YOLOv11 model integrated with the Efficient Crack Enhancement Module (ECEM), training/testing scripts, and an extended version of the RDD2022 dataset, aiming to enhance the model's detection and generalization capabilities in complex scenarios.
 
@@ -113,7 +113,7 @@ If you use the code, extended dataset, or related findings from this project in 
 @article{gao2025ecemyolo,
   title={Enhanced Road Infrastructure Defect Detection via Attention-Based Visual Inspection},
   author={Ningbo Gao, Dupengfei Zhai, Guifang Shi, Guanya Hao, Yong Qi, Zi Yang},
-  journal={The Visual Computer},
+  journal={Journal of Real-Time Image Processing},
   year={202X},
   publisher={Springer},
   note={Code: https://github.com/zdpf122/ECEM-YOLO-RoadDefect; Dataset: https://doi.org/10.5281/zenodo.17792244}

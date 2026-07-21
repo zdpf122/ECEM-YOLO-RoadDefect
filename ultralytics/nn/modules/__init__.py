@@ -58,7 +58,7 @@ from .block import (
     RepVGGDW,
     ResNetLayer,
     SCDown,
-    TorchVision,CBAM, C3k2CE,
+    TorchVision,CBAM, EfficientCrackEnhance, EfficientBottleneckCE, C3k2CE,
 )
 from .conv import (
     ChannelAttention,

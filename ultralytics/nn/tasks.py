@@ -9,7 +9,7 @@ from pathlib import Path
 
 import torch
 import torch.nn as nn
-
+from ultralytics.nn.NewModules import HACNet
 from ultralytics.nn.autobackend import check_class_names
 from ultralytics.nn.modules import (
     AIFI,
@@ -67,7 +67,7 @@ from ultralytics.nn.modules import (
     WorldDetect,
     YOLOEDetect,
     YOLOESegment,
-    v10Detect, C3k2CE
+    v10Detect, C3k2CE, EfficientBottleneckCE, EfficientCrackEnhance,
 )
 from ultralytics.utils import DEFAULT_CFG_DICT, DEFAULT_CFG_KEYS, LOGGER, YAML, colorstr, emojis
 from ultralytics.utils.checks import check_requirements, check_suffix, check_yaml
@@ -1400,7 +1400,7 @@ def parse_model(d, ch, verbose=True):  # model_dict, input_channels(3)
             SCDown,
             C2fCIB,
             A2C2f,
-            C3k2CE,
+            C3k2CE, HACNet
         }
     )
     repeat_modules = frozenset(  # modules with 'repeat' arguments
@@ -1419,7 +1419,7 @@ def parse_model(d, ch, verbose=True):  # model_dict, input_channels(3)
             C2fPSA,
             C2fCIB,
             C2PSA,
-            A2C2f, C3k2CE
+            A2C2f, C3k2CE, HACNet
         }
     )
     for i, (f, n, m, args) in enumerate(d["backbone"] + d["head"]):  # from, number, module, args
@@ -1458,29 +1458,6 @@ def parse_model(d, ch, verbose=True):  # model_dict, input_channels(3)
                     args.extend((True, 1.2))
             if m is C2fCIB:
                 legacy = False
-        elif m in {MobileNetV4ConvLarge, MobileNetV4ConvSmall, \
-                MobileNetV4ConvMedium, MobileNetV4HybridMedium, MobileNetV4HybridLarge}:
-                m = m(*args)
-                c2 = m.width_list
-                backbone = True
-        elif m in {DAttentionBaseline}:
-            c2 = ch[f]
-            args = [c2, *args]
-        elif m is BiFPN:
-            # 从yaml的args中获取参数，例如[2, 1, True]
-            # 如果args为空，则使用默认值
-            if args:
-                length = args[0]  # 第一个参数是输入特征数量
-                high_res_idx = args[1] if len(args) > 1 else 0  # 第二个参数是高分辨率索引，默认0
-                bg_suppress = args[2] if len(args) > 2 else True  # 第三个参数是背景抑制，默认True
-            else:
-                # 如果没有提供args，则从输入来源f推断length，其他用默认值
-                length = len([ch[x] for x in f])
-                high_res_idx = 0
-                bg_suppress = True
-
-            # 注意：这里我们使用length、high_res_idx、bg_suppress来初始化模块
-            m_ = m(length, high_res_idx, bg_suppress)
         elif m is AIFI:
             args = [ch[f], *args]
         elif m in frozenset({HGStem, HGBlock}):
